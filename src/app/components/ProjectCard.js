@@ -105,68 +105,66 @@ export default function ProjectCard() {
   };
 
   return (
-    <>
+    <ThemeProvider theme={theme}>
       {projects.map((project, index) => {
         return (
-          <ThemeProvider theme={theme}>
-            <Card
+          <Card
+            sx={{
+              maxWidth: 345,
+              bgcolor: "RGB(250,250,250,0.7)",
+              color: "#616161",
+              fontFamily: "monospace",
+            }}
+            key={index}
+          >
+            <CardHeader
               sx={{
-                maxWidth: 345,
-                bgcolor: "RGB(250,250,250,0.7)",
-                color: "#616161",
                 fontFamily: "monospace",
+                letterSpacing: ".3rem",
+                fontSize: "3.25dvb",
+                fontWeight: 600,
+                textWrap: "nowrap",
+                padding: "0.75rem",
+                textAlign: "end",
               }}
-              key={index}
-            >
-              <CardHeader
-                sx={{
-                  fontFamily: "monospace",
-                  letterSpacing: ".3rem",
-                  fontSize: "3.25dvb",
-                  fontWeight: 600,
-                  textWrap: "nowrap",
-                  padding: "0.75rem",
-                  textAlign: "end",
-                }}
-                title={project.title}
-                subheader={project.date}
-              />
-              <Image
-                src={project.image}
-                alt={project.alt}
-                width="345"
-                height="225"
-              />
-              <CardActions disableSpacing sx={{ m: 0, p: 0.5 }}>
-                <IconButton
-                  aria-label="View on Github"
-                  onClick={() => window.open(project.githubLink)}
-                >
-                  <GitHubIcon />
-                </IconButton>
-                <ExpandMore
-                  expand={expanded}
-                  onClick={handleExpandClick}
-                  aria-expanded={expanded}
-                  aria-label="show more"
-                >
-                  <ExpandMoreIcon />
-                </ExpandMore>
-              </CardActions>
-              <Collapse in={expanded} timeout="auto" unmountOnExit>
-                <CardContent>
-                  <Typography paragraph variant="body2" color="text.secondary">
-                    {project.description}
-                  </Typography>
-                  <Typography paragraph variant="body2" color="text.secondary">
-                    <b>Tech Stack:</b> {project.techStack}
-                  </Typography>
-                </CardContent>
-              </Collapse>
-            </Card>
-          </ThemeProvider>
+              title={project.title}
+              subheader={project.date}
+            />
+            <Image
+              src={project.image}
+              alt={project.alt}
+              width="345"
+              height="225"
+            />
+            <CardActions disableSpacing sx={{ m: 0, p: 0.5 }}>
+              <IconButton
+                aria-label="View on Github"
+                onClick={() => window.open(project.githubLink)}
+              >
+                <GitHubIcon />
+              </IconButton>
+              <ExpandMore
+                expand={expanded}
+                onClick={handleExpandClick}
+                aria-expanded={expanded}
+                aria-label="show more"
+              >
+                <ExpandMoreIcon />
+              </ExpandMore>
+            </CardActions>
+            <Collapse in={expanded} timeout="auto" unmountOnExit>
+              <CardContent>
+                <Typography paragraph variant="body2" color="text.secondary">
+                  {project.description}
+                </Typography>
+                <Typography paragraph variant="body2" color="text.secondary">
+                  <b>Tech Stack:</b> {project.techStack}
+                </Typography>
+              </CardContent>
+            </Collapse>
+          </Card>
         );
       })}
-    </>
+    </ThemeProvider>
   );
 }
