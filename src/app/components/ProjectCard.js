@@ -4,19 +4,25 @@ import Image from "next/image";
 import { styled } from "@mui/material/styles";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
-import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
 import Collapse from "@mui/material/Collapse";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import FavoriteIcon from "@mui/icons-material/Favorite";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const projects = [
+  {
+    title: "HappyTails",
+    date: "April 2024",
+    image: "/images/HappyTailsLP.png",
+    alt: "HappyTails Landing Page",
+    description:
+      "A multi-page application (MPA) adaptation of a Buy/Sell Listing Website which acts as a hub page for multiple dog rescues.",
+    techStack: "PSQL, Express, Node.js, HTML/CSS",
+    githubLink: "https://github.com/rachdawn/Happy-Tails",
+  },
   {
     title: "DateSync",
     date: "January 2024",
@@ -33,8 +39,8 @@ const projects = [
     image: "/images/JungleLP.png",
     alt: "Jungle Landing Page",
     description:
-      "An e-commerce multi-page application (SPA) that allows users to view and purchase products.",
-    techStack: "PSQL, Express, Node.js, HTML/CSS",
+      "An e-commerce multi-page application (MPA), modeling a boutique plant shop, that allows users to view and purchase products.",
+    techStack: "Ruby, Rails, PSQL, jQuery, RSpec, Bootstrap, Stripe",
   },
   {
     title: "PhotoLabs",
@@ -45,16 +51,6 @@ const projects = [
       "A single-page application (SPA) that allows users to view photos in different contexts.",
     techStack: "PSQL, Express, React, Node.js, Axios",
     githubLink: "https://github.com/rachdawn/PhotoLabs",
-  },
-  {
-    title: "HappyTails",
-    date: "November 2023",
-    // image: "/images/HappyTailsLP.png",
-    alt: "HappyTails Landing Page",
-    description:
-      "A multi-page application (MPA) adaptation of a Buy/Sell Listing Website which acts as a hub page for multiple dog rescues.",
-    techStack: "PSQL, Express, Node.js, HTML/CSS",
-    githubLink: "https://github.com/rachdawn/Happy-Tails",
   },
   {
     title: "Tweeter",
@@ -77,33 +73,6 @@ const projects = [
   },
 ];
 
-const theme = createTheme({
-    components: {
-    MuiCard: {
-        styleOverrides: {
-            root: {
-            fontFamily: "monospace",
-            color: "white",
-        },
-        },  
-    },
-    MuiTypography: {
-        styleOverrides: {
-            root: {
-            fontFamily: "monospace",
-        },
-        },
-    },
-    // MuiCardContent: {
-    //     styleOverrides: {
-    //         root: {
-    //         fontFamily: "monospace",
-    //     },
-    //     },
-    // },
-}
-});
-
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
   return <IconButton {...other} />;
@@ -123,21 +92,14 @@ export default function ProjectCard() {
   };
 
   return (
-    // map over projects array
-    // for each project, create a card with the following props:
-    // title, date, image, alt, description, techStack, githubLink
     <>
       {projects.map((project, index) => {
         return (
-          <ThemeProvider theme={theme}>
             <Card
               sx={{
                 maxWidth: 345,
-                // bgcolor: "#EEECEB",
-                // bgcolor: "RGB(153,142,142,0.4)",
                 bgcolor: "RGB(250,250,250,0.7)",
-                color: "#B86782",
-
+                color: "#616161",
                 fontFamily: "monospace",
               }}
               key={index}
@@ -150,13 +112,8 @@ export default function ProjectCard() {
                   fontWeight: 600,
                   textWrap: "nowrap",
                   padding: "0.75rem",
-                  textAlign: "end"
+                  textAlign: "end",
                 }}
-                //   action={
-                //     <IconButton aria-label="settings">
-                //       <MoreVertIcon />
-                //     </IconButton>
-                //   }
                 title={project.title}
                 subheader={project.date}
               />
@@ -167,9 +124,6 @@ export default function ProjectCard() {
                 height="225"
               />
               <CardActions disableSpacing sx={{ m: 0, p: 0.5 }}>
-                {/* <IconButton aria-label="add to favorites">
-                <FavoriteIcon />
-              </IconButton> */}
                 <IconButton
                   aria-label="View on Github"
                   onClick={() => window.open(project.githubLink)}
@@ -196,10 +150,8 @@ export default function ProjectCard() {
                 </CardContent>
               </Collapse>
             </Card>
-          </ThemeProvider>
         );
       })}
     </>
   );
 }
-
