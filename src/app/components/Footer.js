@@ -13,7 +13,7 @@ import PhoneOutlinedIcon from "@mui/icons-material/PhoneOutlined";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import AboutDialog from "./AboutDialog";
+// import AboutDialog from "./AboutDialog";
 
 const theme = createTheme({
   palette: {
