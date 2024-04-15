@@ -2,7 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import ResponsiveAppBar from "./components/ResponsiveAppBar";
-
+import Footer from "./components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -17,6 +17,7 @@ export default function RootLayout({ children }) {
         <AppRouterCacheProvider>
             <ResponsiveAppBar />
             {children}
+            <Footer />
         </AppRouterCacheProvider>
       </body>
     </html>
