@@ -1,5 +1,59 @@
 .main {
+    top: 0;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  /* padding-top: 5rem; */
+  /* background-color: #eacdcf; */
+  background: url("../assets/pawel-czerwinski-hR545CzxZxk-unsplash.jpg");
+  background-size: 110vw 300vh;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  aspect-ratio: 6 / 4;
+  font-family: monospace;
+}
+.hero {
+    height: 45vh;
+    position: sticky;
+    padding: 3rem;
+    padding-top: 12%;
+    text-align: end;
+}
+
+.about hr {
+    margin: 1rem 0;
+    border: 1.25px solid #707070;
+}
+
+.about h2 {
+    font-size: 1.75rem;
+    font-family: monospace;
+    color: #616161;
+}
+
+.projects {
+    padding:  2rem;
+    
+}
+
+.projects h2 {
+    font-size: 1.75rem;
+    font-family: monospace;
+    color: #616161;
+}
+
+.projects hr {
+    margin: 1rem 0;
+    margin-bottom: 2rem;
+    border: 1.25px solid #707070;
+}
+
+.projectCards {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));
+gap: 1.5rem;
+/* padding: 0.5rem; */
+align-content: center;
+justify-items: center;
+margin: 0 auto;
 }
