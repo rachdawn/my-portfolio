@@ -11,6 +11,7 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const projects = [
   {
@@ -73,6 +74,18 @@ const projects = [
   },
 ];
 
+const theme = createTheme({
+  components: {
+    MuiTypography: {
+      styleOverrides: {
+        root: {
+          fontFamily: "monospace",
+        },
+      },
+    },
+  },
+});
+
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
   return <IconButton {...other} />;
@@ -95,6 +108,7 @@ export default function ProjectCard() {
     <>
       {projects.map((project, index) => {
         return (
+          <ThemeProvider theme={theme}>
             <Card
               sx={{
                 maxWidth: 345,
@@ -150,6 +164,7 @@ export default function ProjectCard() {
                 </CardContent>
               </Collapse>
             </Card>
+          </ThemeProvider>
         );
       })}
     </>
