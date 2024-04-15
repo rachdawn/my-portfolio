@@ -11,7 +11,7 @@ export default function Hero() {
           fontFamily: "monospace",
           color: "#707070",
           letterSpacing: ".3rem",
-          fontSize: "3.5dvb",
+          fontSize: "1.75rem",
           fontWeight: 500,
           textWrap: "nowrap",
         }}
@@ -26,7 +26,7 @@ export default function Hero() {
           fontFamily: "monospace",
           color: "#707070",
           letterSpacing: ".3rem",
-          fontSize: "4dvb",
+          fontSize: "2.25rem",
           fontWeight: 700,
           textTransform: "uppercase",
           textWrap: "nowrap",
