@@ -1,5 +1,7 @@
 "use client";
 import * as React from "react";
+// import AboutDialog from "./AboutDialog";
+// MUI
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -8,9 +10,10 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Button from "@mui/material/Button";
+// import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import LaptopMacRoundedIcon from "@mui/icons-material/LaptopMacRounded";
+// import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const theme = createTheme({
@@ -44,7 +47,11 @@ export default function ResponsiveAppBar() {
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <LaptopMacRoundedIcon
-              sx={{ display: { xs: "none", md: "flex" }, mr: 1, color: "secondary.dark"}}
+              sx={{
+                display: { xs: "none", md: "flex" },
+                mr: 1,
+                color: "secondary.dark",
+              }}
             />
             <Typography
               variant="h6"
@@ -67,7 +74,7 @@ export default function ResponsiveAppBar() {
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
               <IconButton
                 size="large"
-                aria-label="account of current user"
+                aria-label="menu"
                 aria-controls="menu-appbar"
                 aria-haspopup="true"
                 onClick={handleOpenNavMenu}
@@ -101,7 +108,11 @@ export default function ResponsiveAppBar() {
               </Menu>
             </Box>
             <LaptopMacRoundedIcon
-              sx={{ display: { xs: "flex", md: "none" }, mr: 1, color: "secondary.dark"}}
+              sx={{
+                display: { xs: "flex", md: "none" },
+                mr: 1,
+                color: "secondary.dark",
+              }}
             />
             <Typography
               variant="h5"
@@ -121,23 +132,31 @@ export default function ResponsiveAppBar() {
             >
               rl
             </Typography>
-            <Box
+            {/* <Box
               sx={{
                 flexGrow: 1,
                 display: { xs: "none", md: "flex" },
                 justifyContent: "right",
               }}
             >
-              {pages.map((page) => (
-                <Button
-                  key={page}
-                  onClick={open}
-                  sx={{ my: 2, bgcolor: "main", color: "secondary.dark", display: "flex" }}
-                >
-                  {page}
-                </Button>
-              ))}
-            </Box>
+              <AboutDialog />
+              <Button
+                startIcon={<FileDownloadOutlinedIcon />}
+                href="/files/Rachel-Little-FlowCV-Resume-20240408.pdf"
+                download="Rachel-Little-FlowCV-Resume-20240408.pdf"
+                sx={{
+                  fontFamily: "monospace",
+                //   color: "#B86782",
+                  my: 2,
+                  mx: 1,
+                  bgcolor: "main",
+                  color: "secondary.dark",
+                  display: "flex",
+                }}
+              >
+                Download Resume
+              </Button>
+            </Box> */}
           </Toolbar>
         </Container>
       </AppBar>
