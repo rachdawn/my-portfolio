@@ -2,18 +2,16 @@
     top: 0;
   justify-content: center;
   align-items: center;
-  /* min-height: 100vh; */
-  /* padding-top: 5rem; */
-  /* background-color: #eacdcf; */
-  background: url("../assets/pawel-czerwinski-hR545CzxZxk-unsplash.jpg");
-  background-size: 110vw 300vh;
+  background: url("../assets/pawel-czerwinski-2PN18U8CKi0-unsplash.jpg");
+  background-size: 100vw 300vh;
+    /* background-size: cover; */
+  filter: saturate(0.8);
   margin: 0 auto;
   background-repeat: no-repeat;
-  aspect-ratio: 6 / 4;
   font-family: monospace;
 }
 .hero {
-    height: 45vh;
+    height: 40vh;
     position: sticky;
     padding: 3rem;
     padding-top: 12%;

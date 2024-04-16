@@ -18,12 +18,13 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "rgb(234, 205, 207)",
-      dark: "#B86782",
+        main: "#707070",
+        dark: "#B86782",
     },
     secondary: {
       light: "#EEECEB",
-      main: "#707070",
+      main: "rgb(234, 205, 207)",
+
     },
   },
 });
@@ -127,7 +128,7 @@ export default function Footer() {
               sx={{
                 fontFamily: "monospace",
                 bgcolor: "main",
-                color: "secondary.dark",
+                color: "secondary.main",
                 display: "flex",
               }}
             >
