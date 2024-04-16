@@ -5,8 +5,8 @@ import Divider from "@mui/material/Divider";
 
 export default function AboutMe() {
     return (
-        <Box sx={{ m: 2, display: "flex" }}>
-            <Box sx={{ p: 2, width: "45%" }}>
+        <Box sx={{ m: 2, display: "flex", bgcolor: "rgb(218,218,218,0.6)", borderRadius: "1rem" }}>
+            <Box sx={{ p: 1.5, width: "42%" }}>
                 <Typography
                     sx={{
                         fontFamily: "monospace",
@@ -25,8 +25,8 @@ export default function AboutMe() {
                         fontFamily: "monospace",
                         color: "#616161",
                         // fontWeight: 600,
-                        letterSpacing: ".2rem",
-                        fontSize: "1.1rem",
+                        letterSpacing: ".18rem",
+                        fontSize: "1rem",
                         p: 1,
                         textAlign: "right",
                     }}
@@ -48,7 +48,7 @@ export default function AboutMe() {
                 </Typography>
             </Box>
             <Divider orientation="vertical" flexItem />
-            <Box sx={{ p: 2, width: "55%" }}>
+            <Box sx={{ p: 1.5, width: "58%" }}>
                 <Typography
                     sx={{
                         fontFamily: "monospace",
