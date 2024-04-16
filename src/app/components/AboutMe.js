@@ -56,7 +56,7 @@ export default function AboutMe() {
                         fontWeight: 500,
                         lineHeight: 1.25,
                         letterSpacing: ".18rem",
-                        fontSize: "1.1rem",
+                        fontSize: "1rem",
                         p: 1,
                     }}
                 >
