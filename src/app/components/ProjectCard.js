@@ -42,11 +42,12 @@ const projects = [
     description:
       "An e-commerce multi-page application (MPA), modeling a boutique plant shop, that allows users to view and purchase products.",
     techStack: "Ruby, Rails, PSQL, jQuery, RSpec, Bootstrap, Stripe",
+    githubLink: "https://github.com/rachdawn/Jungle-Rails",
   },
   {
     title: "PhotoLabs",
     date: "December 2023",
-    image: "/images/Photolabs.png",
+    image: "/images/PhotolabsLP.png",
     alt: "PhotoLabs Landing Page",
     description:
       "A single-page application (SPA) that allows users to view photos in different contexts.",
@@ -80,6 +81,7 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           fontFamily: "monospace",
+        //   color: "rgb(234, 205, 207)"
         },
       },
     },
@@ -111,7 +113,7 @@ export default function ProjectCard() {
           <Card
             sx={{
               maxWidth: 345,
-              bgcolor: "RGB(250,250,250,0.7)",
+              bgcolor: "rgb(218,218,218,0.6)",
               color: "#616161",
               fontFamily: "monospace",
             }}
@@ -126,6 +128,8 @@ export default function ProjectCard() {
                 textWrap: "nowrap",
                 padding: "0.75rem",
                 textAlign: "end",
+                color: "#616161",
+
               }}
               title={project.title}
               subheader={project.date}
@@ -139,25 +143,27 @@ export default function ProjectCard() {
             <CardActions disableSpacing sx={{ m: 0, p: 0.5 }}>
               <IconButton
                 aria-label="View on Github"
-                onClick={() => window.open(project.githubLink)}
-              >
-                <GitHubIcon />
+                onClick={() => window.open(project.githubLink)} sx={{ color: "#616161" }}
+                >
+                <GitHubIcon
+                 />
               </IconButton>
               <ExpandMore
                 expand={expanded}
                 onClick={handleExpandClick}
                 aria-expanded={expanded}
                 aria-label="show more"
+                sx={{ color: "#616161" }}
               >
                 <ExpandMoreIcon />
               </ExpandMore>
             </CardActions>
             <Collapse in={expanded} timeout="auto" unmountOnExit>
               <CardContent>
-                <Typography paragraph variant="body2" color="text.secondary">
+                <Typography paragraph variant="body1" sx={{ color: "#616161" }}>
                   {project.description}
                 </Typography>
-                <Typography paragraph variant="body2" color="text.secondary">
+                <Typography paragraph variant="body1" sx={{ color: "#616161" }}>
                   <b>Tech Stack:</b> {project.techStack}
                 </Typography>
               </CardContent>
