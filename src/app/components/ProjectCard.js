@@ -139,6 +139,7 @@ export default function ProjectCard() {
               alt={project.alt}
               width="345"
               height="225"
+              priority
             />
             <CardActions disableSpacing sx={{ m: 0, p: 0.5 }}>
               <IconButton
