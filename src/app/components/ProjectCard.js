@@ -112,7 +112,7 @@ export default function ProjectCard() {
         return (
           <Card
             sx={{
-              maxWidth: 345,
+              width: 345,
               bgcolor: "rgb(218,218,218,0.6)",
               color: "#616161",
               fontFamily: "monospace",
