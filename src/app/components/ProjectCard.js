@@ -47,7 +47,7 @@ const projects = [
   {
     title: "PhotoLabs",
     date: "December 2023",
-    image: "/images/PhotolabsLP1.png",
+    image: "/images/PhotoLabsLP.png",
     alt: "PhotoLabs Landing Page",
     description:
       "A single-page application (SPA) that allows users to view photos in different contexts.",
