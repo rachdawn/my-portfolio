@@ -15,7 +15,7 @@ export default function Home() {
           {/* <hr /> */}
           <AboutMe />
         </div>
-        <div className={styles.projects}>
+        <div className={styles.projects} id="projects">
           <h2>Recent Projects</h2>
           <hr />
           <div className={styles.projectCards}>

@@ -1,57 +1,118 @@
 .main {
-    top: 0;
+  top: 0;
   justify-content: center;
   align-items: center;
   background: url("../assets/pawel-czerwinski-2PN18U8CKi0-unsplash.jpg");
-  background-size: 100vw 300vh;
-    /* background-size: cover; */
+  /* background-size: 100vw 300vh; */
+  background-size: cover;
   filter: saturate(0.8);
   margin: 0 auto;
   background-repeat: no-repeat;
   font-family: monospace;
 }
 .hero {
-    height: 40vh;
-    position: sticky;
-    padding: 3rem;
-    padding-top: 12%;
-    text-align: end;
+  height: 30vh;
+  position: sticky;
+  padding: 1rem;
+  top: 15vh;
+  text-align: center;
 }
 
 .about hr {
-    margin: 1rem 0;
-    border: 1.25px solid #707070;
+  margin: 1rem;
+  border: 1.25px solid #707070;
 }
 
 .about h2 {
-    font-size: 1.75rem;
-    font-family: monospace;
-    color: #616161;
+  font-size: 1.75rem;
+  font-family: monospace;
+  color: #616161;
 }
 
 .projects {
-    padding:  2rem;
-    
+  padding-top: 1rem;
 }
 
 .projects h2 {
-    font-size: 1.75rem;
-    font-family: monospace;
-    color: #616161;
+  font-size: 1.75rem;
+  font-family: monospace;
+  color: #616161;
 }
 
 .projects hr {
-    margin: 1rem 0;
-    margin-bottom: 2rem;
-    border: 1.25px solid #707070;
+  margin: 1rem 0;
+  margin-bottom: 2rem;
+  border: 1.25px solid #707070;
 }
 
 .projectCards {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));
-gap: 1.5rem;
-/* padding: 0.5rem; */
-align-content: center;
-justify-items: center;
-margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));
+  gap: 1.5rem;
+  /* padding: 0.5rem; */
+  align-content: center;
+  justify-items: center;
+  margin: 0 auto;
+}
+.mui-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
+    background-color: #707070;
+}
+
+@media (min-width: 769px) {
+  .main {
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    background: url("../assets/pawel-czerwinski-2PN18U8CKi0-unsplash.jpg");
+    background-size: 100vw 300vh;
+    /* background-size: cover; */
+    filter: saturate(0.8);
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    font-family: monospace;
+  }
+  .hero {
+    height: 40vh;
+    position: sticky;
+    padding: 3rem;
+    /* padding-top: 12%; */
+    text-align: end;
+  }
+
+  .about hr {
+    margin: 1rem 0;
+    border: 1.25px solid #707070;
+  }
+
+  .about h2 {
+    font-size: 1.75rem;
+    font-family: monospace;
+    color: #616161;
+  }
+
+  .projects {
+    padding: 0.5rem;
+  }
+
+  .projects h2 {
+    font-size: 1.75rem;
+    font-family: monospace;
+    color: #616161;
+  }
+
+  .projects hr {
+    margin: 1rem 0;
+    margin-bottom: 2rem;
+    border: 1.25px solid #707070;
+  }
+
+  .projectCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));
+    gap: 1.5rem;
+    /* padding: 0.5rem; */
+    align-content: center;
+    justify-items: center;
+    margin: 0 auto;
+  }
 }

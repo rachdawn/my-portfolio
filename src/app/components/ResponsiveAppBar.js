@@ -1,5 +1,6 @@
 "use client";
 import * as React from "react";
+import Link from "next/link";
 // import AboutDialog from "./AboutDialog";
 // MUI
 import AppBar from "@mui/material/AppBar";
@@ -19,16 +20,45 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "rgb(234, 205, 207, 0.5)",
+      main: "rgb(234, 205, 207, 0.35)",
       dark: "#B86782",
     },
     secondary: {
-      light: "#EEECEB",
       main: "#707070",
+      dark: "#616161",
+    },
+  },
+  components: {
+    MuiMenu: {
+      styleOverrides: {
+        paper: {
+          backgroundColor: "rgb(218,218,218,0.6)",
+        },
+        root: {
+          mt: 5,
+          fontFamily: "monospace",
+          color: "#616161",
+          "&:hover": {
+            bgcolor: "rgb(234, 205, 207)",
+          },
+        },
+      },
+    },
+    MuiMenuItem: {
+      styleOverrides: {
+        root: {
+          fontFamily: "monospace",
+          color: "#616161",
+          "&:hover": {
+            fontWeight: 600,
+            bgcolor: "rgb(234, 205, 207)",
+          },
+        },
+      },
     },
   },
 });
-const pages = ["About Me", "Contact"];
+const pages = ["Projects"];
 
 export default function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -50,7 +80,7 @@ export default function ResponsiveAppBar() {
               sx={{
                 display: { xs: "none", md: "flex" },
                 mr: 1,
-                color: "secondary.dark",
+                color: "#616161",
               }}
             />
             <Typography
@@ -64,7 +94,7 @@ export default function ResponsiveAppBar() {
                 fontFamily: "monospace",
                 fontWeight: 700,
                 letterSpacing: ".3rem",
-                color: "secondary.dark",
+                color: "#616161",
                 textDecoration: "none",
               }}
             >
@@ -101,8 +131,12 @@ export default function ResponsiveAppBar() {
                 }}
               >
                 {pages.map((page) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{page}</Typography>
+                  <MenuItem key={page} onClick={handleCloseNavMenu} dense>
+                    <Link href="/#projects" >
+                      <Typography textAlign="center" fontFamily="monospace">
+                        {page}
+                      </Typography>
+                    </Link>
                   </MenuItem>
                 ))}
               </Menu>
@@ -111,7 +145,7 @@ export default function ResponsiveAppBar() {
               sx={{
                 display: { xs: "flex", md: "none" },
                 mr: 1,
-                color: "secondary.dark",
+                color: "#616161",
               }}
             />
             <Typography
@@ -126,7 +160,7 @@ export default function ResponsiveAppBar() {
                 fontFamily: "monospace",
                 fontWeight: 700,
                 letterSpacing: ".3rem",
-                color: "secondary.dark",
+                color: "#616161",
                 textDecoration: "none",
               }}
             >
