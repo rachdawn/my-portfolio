@@ -9,6 +9,7 @@
   margin: 0 auto;
   background-repeat: no-repeat;
   font-family: monospace;
+  padding-bottom: 2rem;
 }
 .hero {
   height: 30vh;
@@ -58,7 +59,7 @@
     background-color: #707070;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 900px) {
   .main {
     top: 0;
     justify-content: center;

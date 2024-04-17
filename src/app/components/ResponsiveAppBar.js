@@ -96,6 +96,7 @@ export default function ResponsiveAppBar() {
                 letterSpacing: ".3rem",
                 color: "#616161",
                 textDecoration: "none",
+                verticalAlign: "text-bottom",
               }}
             >
               rl
