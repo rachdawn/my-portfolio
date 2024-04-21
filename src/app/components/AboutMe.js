@@ -7,7 +7,8 @@ export default function AboutMe() {
   return (
     <Box
       sx={{
-        m: 2,
+        mb: "2rem",
+        mx: "4rem",
         display: "flex",
         bgcolor: "rgb(218,218,218,0.6)",
         borderRadius: "1rem",
@@ -57,6 +58,19 @@ export default function AboutMe() {
       </Box>
       <Divider orientation="vertical" flexItem />
       <Box sx={{ p: 1.5, width: {xs: "100%", md: "58%"} }}>
+      <Typography
+          sx={{
+            fontFamily: "monospace",
+            color: "#616161",
+            fontWeight: 600,
+            fontSize: "1.1rem",
+            p: 1,
+            textAlign: "left",
+            textTransform: "uppercase",
+          }}
+        >
+          About Me:
+        </Typography>
         <Typography
           sx={{
             fontFamily: "monospace",
