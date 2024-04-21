@@ -75,6 +75,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               color="secondary"
+              aria-label="LinkedIn"
             >
               <LinkedInIcon />
             </IconButton>
@@ -84,6 +85,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 color="secondary"
+                aria-label="Email"
             >
                 <EmailOutlinedIcon />
             </IconButton>
@@ -100,6 +102,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               color="secondary"
+              aria-label="GitHub"
             >
               <GitHubIcon />
             </IconButton>
@@ -124,6 +127,7 @@ export default function Footer() {
               }
               target="_blank"
               rel="noopener noreferrer"
+              aria-labelledby="View My Resume"
               startIcon={<FileOpenOutlinedIcon />}
               sx={{
                 fontFamily: "monospace",
