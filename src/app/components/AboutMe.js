@@ -8,14 +8,14 @@ export default function AboutMe() {
     <Box
       sx={{
         mb: "2rem",
-        mx: "4rem",
+        mx: "3rem",
         display: "flex",
         bgcolor: "rgb(218,218,218,0.6)",
         borderRadius: "1rem",
         flexDirection: { xs: "column", md: "row" },
       }}
     >
-      <Box sx={{ p: 1.5, width: {xs: "100%", md: "42%"} }}>
+      <Box sx={{ p: 1.5, width: { xs: "100%", md: "42%" } }}>
         <Typography
           sx={{
             fontFamily: "monospace",
@@ -57,8 +57,8 @@ export default function AboutMe() {
         </Typography>
       </Box>
       <Divider orientation="vertical" flexItem />
-      <Box sx={{ p: 1.5, width: {xs: "100%", md: "58%"} }}>
-      <Typography
+      <Box sx={{ p: 1.5, width: { xs: "100%", md: "58%" } }}>
+        <Typography
           sx={{
             fontFamily: "monospace",
             color: "#616161",
@@ -82,20 +82,21 @@ export default function AboutMe() {
             p: 1,
           }}
         >
-          I&apos;m a full-stack web developer with a passion for creating
-          beautiful applications that deliver high-quality user experiences.
-          I&apos;m a strategic thinker with a versatile background in business
+          I&apos;m a full-stack web developer with a passion for crafting
+          elegant applications for optimal user experiences. I&apos;m a
+          strategic thinker with a versatile background in business
           administration and marketing, ready to bring my unique blend of
           business savviness and programming skills to dynamic projects.
           <br />
           <br />
-          As a graduate of the Lighthouse Labs Web Development Bootcamp, I
-          possess a diploma and a strong foundation in full-stack development.
-          My training encompassed front-end essentials such as JavaScript, CSS,
+          My training encompassed programming essentials such as JavaScript, CSS,
           and HTML, alongside in-depth studies in software architecture,
-          databases, data modeling, and component-based design. Equipped with
-          real-world experience and vital soft skills, I am well-prepared to
-          embark on a fulfilling career as a full-stack developer.
+          databases, data modeling, and component-based design.
+          <br />
+          <br />
+          In my free time you can find me spending time with my dogs, friends, &
+          family, tending to my 30+ houseplants, watching the latest true crime
+          documentary, or working on personal projects.
         </Typography>
       </Box>
     </Box>
