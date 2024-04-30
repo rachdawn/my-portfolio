@@ -1,9 +1,11 @@
-import { Inter } from "next/font/google";
+// import { Inter } from "next/font/google";
+import { Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import ResponsiveAppBar from "./components/ResponsiveAppBar";
 import Footer from "./components/Footer";
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
+const roboto_mono = Roboto_Mono({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Rachel Little",
@@ -13,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={roboto_mono.className}>
         <AppRouterCacheProvider>
             <ResponsiveAppBar />
             {children}
