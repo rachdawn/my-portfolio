@@ -10,11 +10,9 @@ export default function Home() {
     <main className={styles.main}>
       <Container maxWidth="xl" sx={{ pb: 8 }}>
         <Hero />
-        <div className={styles.about}>
-          {/* <h2>About Me</h2> */}
-          {/* <hr /> */}
+        {/* <div className={styles.about}> */}
           <AboutMe />
-        </div>
+        {/* </div> */}
         <div className={styles.projects} id="projects">
           <h2>Recent Projects</h2>
           <hr />

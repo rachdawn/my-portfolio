@@ -1,24 +1,26 @@
 "use client";
+import styles from "../page.module.css";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 
 export default function AboutMe() {
   return (
+    <section className={styles.about}>
     <Box
       sx={{
         mb: "2rem",
         mx: "3rem",
         display: "flex",
-        bgcolor: "rgb(218,218,218,0.6)",
+        bgcolor: "rgb(218,218,218,0.5)",
         borderRadius: "1rem",
         flexDirection: { xs: "column", md: "row" },
-      }}
+    }}
     >
       <Box sx={{ p: 1.5, width: { xs: "100%", md: "42%" } }}>
         <Typography
           sx={{
-            fontFamily: "monospace",
+            fontFamily: "Roboto Mono, monospace",
             color: "#616161",
             fontWeight: 600,
             fontSize: "1.1rem",
@@ -31,10 +33,10 @@ export default function AboutMe() {
         </Typography>
         <Typography
           sx={{
-            fontFamily: "monospace",
+            fontFamily: "Roboto Mono, monospace",
             color: "#616161",
             // fontWeight: 600,
-            letterSpacing: ".18rem",
+            letterSpacing: ".15rem",
             fontSize: "1rem",
             p: 1,
             textAlign: "right",
@@ -60,7 +62,7 @@ export default function AboutMe() {
       <Box sx={{ p: 1.5, width: { xs: "100%", md: "58%" } }}>
         <Typography
           sx={{
-            fontFamily: "monospace",
+            fontFamily: "Roboto Mono, monospace",
             color: "#616161",
             fontWeight: 600,
             fontSize: "1.1rem",
@@ -73,11 +75,11 @@ export default function AboutMe() {
         </Typography>
         <Typography
           sx={{
-            fontFamily: "monospace",
+            fontFamily: "Roboto Mono, monospace",
             color: "#616161",
             fontWeight: 500,
             lineHeight: 1.25,
-            letterSpacing: ".18rem",
+            letterSpacing: ".15rem",
             fontSize: "1rem",
             p: 1,
           }}
@@ -100,5 +102,6 @@ export default function AboutMe() {
         </Typography>
       </Box>
     </Box>
+    </section>
   );
 }

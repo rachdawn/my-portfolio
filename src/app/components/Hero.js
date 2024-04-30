@@ -8,7 +8,7 @@ export default function Hero() {
         variant="body"
         component="h1"
         sx={{
-          fontFamily: "monospace",
+        //   fontFamily: "monospace",
           color: "#707070",
           letterSpacing: ".3rem",
           fontSize: { xs: "1.1rem", sm: "1.75rem"},
@@ -23,7 +23,7 @@ export default function Hero() {
         component="h2"
         gutterBottom
         sx={{
-          fontFamily: "monospace",
+        //   fontFamily: "monospace",
           color: "#707070",
           letterSpacing: ".3rem",
           fontSize: {xs:"1.75rem", sm: "2.25rem"},

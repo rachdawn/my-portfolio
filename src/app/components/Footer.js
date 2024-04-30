@@ -130,7 +130,7 @@ export default function Footer() {
               aria-labelledby="View My Resume"
               startIcon={<FileOpenOutlinedIcon />}
               sx={{
-                fontFamily: "monospace",
+                fontFamily: "Roboto Mono, monospace",
                 bgcolor: "main",
                 color: "secondary.main",
                 display: "flex",

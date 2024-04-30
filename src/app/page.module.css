@@ -7,15 +7,16 @@
   background-size: cover;
   filter: saturate(0.8);
   margin: 0 auto;
+    padding-top: 3rem;
   background-repeat: no-repeat;
-  font-family: monospace;
   padding-bottom: 2rem;
 }
 .hero {
   height: 30vh;
-  position: sticky;
-  padding: 1rem;
-  top: 15vh;
+  align-content: center;
+  /* position: sticky; */
+  /* padding: 1rem; */
+  /* top: 15vh; */
   text-align: center;
 }
 
@@ -26,7 +27,7 @@
 
 .about h2 {
   font-size: 1.75rem;
-  font-family: monospace;
+  /* font-family: monospace; */
   color: #616161;
 }
 
@@ -36,7 +37,7 @@
 
 .projects h2 {
   font-size: 1.75rem;
-  font-family: monospace;
+  /* font-family: monospace; */
   color: #616161;
 }
 
@@ -55,9 +56,7 @@
   justify-items: center;
   margin: 0 auto;
 }
-.mui-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
-    background-color: #707070;
-}
+
 
 @media (min-width: 900px) {
   .main {
@@ -69,15 +68,18 @@
     /* background-size: cover; */
     filter: saturate(0.8);
     margin: 0 auto;
+    padding-top: 3rem;
     background-repeat: no-repeat;
-    font-family: monospace;
+    /* font-family: monospace; */
   }
   .hero {
     height: 40vh;
-    position: sticky;
-    padding: 3rem;
+    /* position: sticky; */
+    /* margin: 3rem; */
+    align-content: center;
     /* padding-top: 12%; */
     text-align: end;
+    margin-right: 2rem;
   }
 
   .about hr {
@@ -87,7 +89,7 @@
 
   .about h2 {
     font-size: 1.75rem;
-    font-family: monospace;
+    /* font-family: monospace; */
     color: #616161;
   }
 
@@ -97,7 +99,7 @@
 
   .projects h2 {
     font-size: 1.75rem;
-    font-family: monospace;
+    /* font-family: monospace; */
     color: #616161;
   }
 

@@ -20,7 +20,8 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "rgb(234, 205, 207, 0.35)",
+      main: "rgb(240, 208, 210, 0.35)",
+      solid: "rgb(240, 208, 210)",
       dark: "#B86782",
     },
     secondary: {
@@ -32,14 +33,14 @@ const theme = createTheme({
     MuiMenu: {
       styleOverrides: {
         paper: {
-          backgroundColor: "rgb(218,218,218,0.6)",
+          backgroundColor: "rgb(218,218,218)",
         },
         root: {
           mt: 5,
-          fontFamily: "monospace",
+          fontFamily: "Roboto Mono, monospace",
           color: "#616161",
           "&:hover": {
-            bgcolor: "rgb(234, 205, 207)",
+            bgcolor: "rgb(240, 208, 210)",
           },
         },
       },
@@ -47,11 +48,11 @@ const theme = createTheme({
     MuiMenuItem: {
       styleOverrides: {
         root: {
-          fontFamily: "monospace",
+            fontFamily: "Roboto Mono, monospace",
           color: "#616161",
           "&:hover": {
             fontWeight: 600,
-            bgcolor: "rgb(234, 205, 207)",
+            bgcolor: "rgb(240, 208, 210)",
           },
         },
       },
@@ -73,8 +74,8 @@ export default function ResponsiveAppBar() {
 
   return (
     <ThemeProvider theme={theme}>
-      <AppBar position="absolute">
-        <Container maxWidth="xl">
+      <AppBar sx={{ position: { xs: "fixed", md: "absolute"}, backgroundColor: { xs: "primary.solid", md: "primary.main" }}} >
+        <Container maxWidth="fullWidth">
           <Toolbar disableGutters>
             <LaptopMacRoundedIcon
               sx={{
@@ -91,7 +92,7 @@ export default function ResponsiveAppBar() {
               sx={{
                 mr: 2,
                 display: { xs: "none", md: "flex" },
-                fontFamily: "monospace",
+                fontFamily: "Roboto Mono, monospace",
                 fontWeight: 700,
                 letterSpacing: ".3rem",
                 color: "#616161",
@@ -158,7 +159,7 @@ export default function ResponsiveAppBar() {
                 mr: 2,
                 display: { xs: "flex", md: "none" },
                 flexGrow: 1,
-                fontFamily: "monospace",
+                fontFamily: "Roboto Mono, monospace",
                 fontWeight: 700,
                 letterSpacing: ".3rem",
                 color: "#616161",

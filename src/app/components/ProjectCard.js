@@ -80,7 +80,7 @@ const theme = createTheme({
     MuiTypography: {
       styleOverrides: {
         root: {
-          fontFamily: "monospace",
+            fontFamily: "Roboto Mono, monospace",
         //   color: "rgb(234, 205, 207)"
         },
       },
@@ -113,15 +113,15 @@ export default function ProjectCard() {
           <Card
             sx={{
               width: 345,
-              bgcolor: "rgb(218,218,218,0.6)",
+              bgcolor: "rgb(218,218,218,0.5)",
               color: "#616161",
-              fontFamily: "monospace",
+              fontFamily: "Roboto Mono, monospace",
             }}
             key={index}
           >
             <CardHeader
               sx={{
-                fontFamily: "monospace",
+                fontFamily: "Roboto Mono, monospace",
                 letterSpacing: ".3rem",
                 fontSize: "3.25dvb",
                 fontWeight: 600,
