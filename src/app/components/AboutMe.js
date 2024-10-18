@@ -10,9 +10,10 @@ export default function AboutMe() {
     <Box
       sx={{
         mb: "2rem",
-        mx: "3rem",
+        mx: {xs: "1rem", md: "3rem"},
         display: "flex",
         bgcolor: "rgb(218,218,218,0.5)",
+        boxShadow: "0 0 10px 0 rgba(0,0,0,0.2)",
         borderRadius: "1rem",
         flexDirection: { xs: "column", md: "row" },
     }}
@@ -52,7 +53,7 @@ export default function AboutMe() {
           UI
           <br />
           <b>Systems & Databases:</b> <br />
-          PostgreSQL, Git, Visual Studio Code, Stripe
+          PostgreSQL, Git, Visual Studio Code, Stripe, Zoho
           <br />
           <b>Testing:</b> <br />
           Mocha, Chai, Jest, Cypress, RSpec
