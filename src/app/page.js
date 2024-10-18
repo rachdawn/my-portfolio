@@ -9,7 +9,7 @@ import Container from "@mui/material/Container";
 export default function Home() {
   return (
     <main className={styles.main}>
-      <Container maxWidth="xl" sx={{ pb: 8 }}>
+      <Container maxWidth="xl" sx={{ pb: 4 }}>
         <Hero />
         <AboutMe />
         <div className={styles.projects} id="projects">
