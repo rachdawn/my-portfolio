@@ -29,118 +29,54 @@ const theme = createTheme({
   },
 });
 
-// const phone = `tel:${process.env.PHONE}`
-const email = `mailto:${process.env.EMAIL}`
 
 export default function Footer() {
   return (
     <ThemeProvider theme={theme}>
-      <AppBar
-        position="fixed"
-        color="primary"
+      {/* <AppBar
+        position="sticky"
+        backgroundColor="transparent"
         sx={{ top: "auto", bottom: 0, m: "0 auto", display: "flex" }}
       >
-        <Toolbar sx={{ justifyContent: "space-between", display: "flex" }}>
-          {/* <Box sx={{ justifyContent: "left" }}>
-          <AboutDialog />
-        </Box> */}
+        <Toolbar sx={{ justifyContent: "center", display: "flex", p: 0 }}> */}
           <Box
             sx={{
               justifyContent: "center",
               display: "flex",
               alignItems: "center",
-              p: "0.5rem",
+              p: "0.25rem",
+              bgcolor: "transparent",
             }}
           >
-            {/* <Typography
+            <Typography
               sx={{
                 fontFamily: "monospace",
-                textTransform: "uppercase",
-                color: "secondary.dark",
+                color: "primary.main",
+              bgcolor: "transparent",
+
                 textAlign: "center",
                 fontWeight: 500,
-                fontSize: "0.875rem",
-                lineHeight: 1.75,
-                  letterSpacing: "0.125rem",
+                fontSize: "0.75rem",
+                // lineHeight: 1.75,
+                  letterSpacing: "0.0125rem",
               }}
-              disableGutterBottom
+              disableGutters
             >
-              connect with me
-            </Typography> */}
-
+              designed and developed by Rachel Little, built with Next.js
+            </Typography>
             <IconButton
-              onClick={() =>
-                window.open("https://www.linkedin.com/in/rachel-little2121/")
-              }
+              onClick={() => window.open("https://github.com/rachdawn/my-portfolio")}
               target="_blank"
               rel="noopener noreferrer"
-              color="secondary"
-              aria-label="LinkedIn"
-            >
-              <LinkedInIcon />
-            </IconButton>
-            <IconButton
-                component="a"
-                href={email}
-                target="_blank"
-                rel="noopener noreferrer"
-                color="secondary"
-                aria-label="Email"
-            >
-                <EmailOutlinedIcon />
-            </IconButton>
-            {/* <IconButton
-                href={phone}
-                // target="_blank"
-                rel="noopener noreferrer"
-                color="secondary"
-            >
-                <PhoneOutlinedIcon />
-            </IconButton> */}
-            <IconButton
-              onClick={() => window.open("https://github.com/rachdawn")}
-              target="_blank"
-              rel="noopener noreferrer"
-              color="secondary"
+              color="primary.main"
+              size="small"
               aria-label="GitHub"
             >
               <GitHubIcon />
             </IconButton>
-          </Box>
-          <Box sx={{ justifyItems: "right", display: "flex" }}>
-            {/* <Button
-              startIcon={<FileDownloadOutlinedIcon />}
-              href="/files/Rachel-Little-FlowCV-Resume-20240408.pdf"
-              download="Rachel-Little-FlowCV-Resume-20240408.pdf"
-              sx={{
-                fontFamily: "monospace",
-                bgcolor: "main",
-                color: "secondary.dark",
-                display: "flex",
-              }}
-            >
-              Download Resume
-            </Button> */}
-            <Button
-              onClick={() =>
-                window.open("https://flowcv.com/resume/fq67vtvo3c")
-              }
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-labelledby="View My Resume"
-              startIcon={<FileOpenOutlinedIcon />}
-              sx={{
-                fontFamily: "Roboto Mono, monospace",
-                bgcolor: "main",
-                color: "secondary.main",
-                display: "flex",
-              }}
-            >
-            View My Resume
-            </Button>
-          </Box>
-        </Toolbar>
-      </AppBar>
+            </Box>
+        {/* </Toolbar>
+      </AppBar> */}
     </ThemeProvider>
   );
 }
