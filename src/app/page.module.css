@@ -4,17 +4,14 @@
   height: 100%;
   justify-content: center;
   align-items: center;
-  /* background: url("../assets/pawel-czerwinski-2PN18U8CKi0-unsplash.jpg"); */
-  /* background-size: 100vw 300vh; */
-  /* background-size: cover; */
-  /* filter: saturate(0.5); */
   margin: 0 auto;
-  padding-top: 3rem;
-  background-repeat: no-repeat;
+  padding-left: 0.525rem;
+  padding-right: 0.525rem;
+  padding-top: 2rem;
   padding-bottom: 0;
 }
 .hero {
-  height: 30vh;
+  height: 24vh;
   align-content: center;
   /* position: sticky; */
   /* padding: 1rem; */
@@ -23,7 +20,7 @@
 }
 
 .about hr {
-  margin: 1rem;
+  margin: 0.5rem;
   border: 1.25px solid #707070;
 }
 
@@ -45,40 +42,49 @@
 }
 
 .projects hr {
-  margin: 0.5rem 0;
-  margin-bottom: 1.5rem;
+  margin: 0.25rem 0;
+  margin-bottom: 1rem;
   border: 1.25px solid #707070;
 }
 
-/* .projectCards {
+.projectCards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));
   gap: 1.5rem;
-  /* padding: 0.5rem; */
-/* align-content: center;
+  padding: 0.5rem;
+  align-content: center;
   justify-items: center;
-  margin: 0 auto; */
-/* } */
-
-.projectsSlider {
-  display: flex;
-  /* overflow-x: auto; */
-  /* gap: 1rem; */
-  padding: 0.5rem 1rem;
   margin: 0 auto;
+}
+
+.slider-container {
+  display: flex;
   justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.projectsSlider {
+  margin: 0 auto;
   justify-items: center;
 }
-.slick-prev {
-  left: -10px;
-  /* margin: 0 1rem; */
+button .slick-arrow .slick-prev {
+  font-size: 1.5rem;
+  color: #616161;
 }
-/* .slick-next {
-  right: 0;
-  margin: 0 1rem;
-} */
-.slick-prev:before, .slick-next:before {
-    font-size: 1.5rem;
+.slick-prev:before,
+.slick-next:before {
+  font-size: 1.5rem;
+    color: #616161;
+}
+
+.slick-initialized .slick-slide {
+  display: inline-flex;
+  justify-content: center;
+}
+
+.slick-slide .slick-active .slick-current {
+  display: inline-flex;
+  justify-content: center;
 }
 
 .projectImage {

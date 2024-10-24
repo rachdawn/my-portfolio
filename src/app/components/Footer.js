@@ -40,11 +40,12 @@ export default function Footer() {
       >
         <Toolbar sx={{ justifyContent: "center", display: "flex", p: 0 }}> */}
           <Box
+          component="footer"
             sx={{
               justifyContent: "center",
               display: "flex",
               alignItems: "center",
-              p: "0.25rem",
+              p: "0.125rem",
               bgcolor: "transparent",
             }}
           >
@@ -56,11 +57,11 @@ export default function Footer() {
 
                 textAlign: "center",
                 fontWeight: 500,
-                fontSize: "0.75rem",
+                fontSize: { xs: "0.5rem", sm: "0.7rem" },
                 // lineHeight: 1.75,
                   letterSpacing: "0.0125rem",
               }}
-              disableGutters
+            //   disableGutters
             >
               designed and developed by Rachel Little, built with Next.js
             </Typography>
@@ -71,8 +72,12 @@ export default function Footer() {
               color="primary.main"
               size="small"
               aria-label="GitHub"
+              sx={{
+                color: "primary.main",
+                p: "0.25rem",
+              }}
             >
-              <GitHubIcon />
+              <GitHubIcon sx={{ height: { xs: "1rem", sm: "1.15rem" }, width: { xs: "1rem", sm: "1.15rem" } }}/>
             </IconButton>
             </Box>
         {/* </Toolbar>

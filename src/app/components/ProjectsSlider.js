@@ -94,17 +94,20 @@ const theme = createTheme({
   },
 });
 
+// function PrevArrow(props) {
+//   const { className, style, onClick } = props;
+//   return (
+//      <ArrowCircleLeftRoundedIcon className={`w-fit top-1/2 opacity-0 lg:opacity-100 text-primary block items-center justify-center rounded-full bg-background/20 hover:bg-background/30 p-1 shadow-md absolute z-10 left-5`} onClick={onClick} />
+// );
+// }
+
 // function NextArrow(props) {
 //   const { className, style, onClick } = props;
 //   return (
-//     <ArrowCircleRightRoundedIcon className={className} onClick={onClick} />
+//     <ArrowCircleRightRoundedIcon className={`w-fit top-1/2 opacity-0 lg:opacity-100 text-primary block items-center justify-center rounded-full bg-background/20 hover:bg-background/30 p-1 shadow-md absolute z-10 right-5`} onClick={onClick} />
 //   );
 // }
 
-// function PrevArrow(props) {
-//   const { className, style, onClick } = props;
-//   return <ArrowCircleLeftRoundedIcon className={className} onClick={onClick} />;
-// }
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -151,7 +154,7 @@ export default function ProjectsSlider() {
         },
       },
       {
-        breakpoint: 850,
+        breakpoint: 800,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -161,20 +164,22 @@ export default function ProjectsSlider() {
   };
   return (
     <ThemeProvider theme={theme}>
-      <div className="slider-container">
+      <section className="slider-container" style={{ justifyItems: 'center', justifyContent: 'center' }}>
         <Slider {...settings} className={styles.projectsSlider}>
           {projects.map((project, index) => {
             return (
               <Card
                 sx={{
                     display: "grid",
-                    gridTemplateColumns: "repeat(auto-fit, minmax(345px, 1fr))",
-                    // gap: "1rem",
+                    gridTemplateColumns: "repeat(auto-fit, minmax(355px, 1fr))",
+                    gap: "1rem",
                 //   p: 1,
-                  maxWidth: 375,
+                  maxWidth: 348,
+                  justifySelf: "center",
                 //   minWidth: 345,
                 // height: 350,
-                  margin: "0 auto",
+                  margin: "1rem",
+                  marginRight: "0.5rem",
                   bgcolor: "rgb(218,218,218,0.5)",
                   color: "#616161",
                   fontFamily: "Roboto Mono, monospace",
@@ -198,7 +203,7 @@ export default function ProjectsSlider() {
                 <Image
                   src={project.image}
                   alt={project.alt}
-                  width="375"
+                  width="348"
                   height="240"
                   className={styles.projectImage}
                 />
@@ -260,7 +265,7 @@ export default function ProjectsSlider() {
         <h3>6</h3>
       </div> */}
         </Slider>
-      </div>
+      </section>
     </ThemeProvider>
   );
 }

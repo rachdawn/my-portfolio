@@ -9,6 +9,7 @@ export default function AboutMe() {
     <section className={styles.about}>
     <Box
       sx={{
+        p: 0.75,
         mb: "2rem",
         mx: {xs: "1rem", md: "3rem"},
         display: "flex",
@@ -24,7 +25,7 @@ export default function AboutMe() {
             fontFamily: "Roboto Mono, monospace",
             color: "#616161",
             fontWeight: 600,
-            fontSize: "1.1rem",
+            fontSize: { xs: "1rem", md: "1.125rem" },
             p: 1,
             textAlign: "right",
             textTransform: "uppercase",
@@ -37,8 +38,8 @@ export default function AboutMe() {
             fontFamily: "Roboto Mono, monospace",
             color: "#616161",
             // fontWeight: 600,
-            letterSpacing: ".15rem",
-            fontSize: "1rem",
+            letterSpacing: ".125rem",
+            fontSize: { xs: "0.875rem", md: "1.1rem" },
             p: 1,
             textAlign: "right",
           }}
@@ -66,7 +67,7 @@ export default function AboutMe() {
             fontFamily: "Roboto Mono, monospace",
             color: "#616161",
             fontWeight: 600,
-            fontSize: "1.1rem",
+            fontSize: { xs: "1rem", md: "1.125rem" },
             p: 1,
             textAlign: "left",
             textTransform: "uppercase",
@@ -80,8 +81,8 @@ export default function AboutMe() {
             color: "#616161",
             fontWeight: 500,
             lineHeight: 1.25,
-            letterSpacing: ".15rem",
-            fontSize: "1rem",
+            letterSpacing: ".125rem",
+            fontSize: { xs: "0.875rem", md: "1.1rem" },
             p: 1,
           }}
         >

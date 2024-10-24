@@ -76,7 +76,7 @@
 * {
   box-sizing: border-box;
   padding: 0;
-  /* margin: 0; */
+  margin: 0;
 }
 
 html,
@@ -86,10 +86,9 @@ body {
 }
 
 body {
-  /* color: rgb(var(--foreground-rgb)); */
-  background: url("../assets/pawel-czerwinski-2PN18U8CKi0-unsplash.jpg");
+  background: url("../assets/pawel-czerwinski-2PN18U8CKi0-unsplash.jpg"), rgb(240, 208, 210);
   background-size: cover;
-  /* filter: saturate(0.5); */
+  backdrop-filter: saturate(0.9);
 }
 
 a {

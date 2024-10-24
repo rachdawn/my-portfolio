@@ -83,12 +83,12 @@ export default function ResponsiveAppBar() {
     <ThemeProvider theme={theme}>
       <AppBar
         sx={{
-          position: "fixed",
+          position: "sticky",
           backgroundColor: "secondary.light",
         }}
       >
         <Container maxWidth="fullWidth">
-          <Toolbar disableGutters sx={{ justifyContent: "space-between" }}>
+          <Toolbar sx={{ justifyContent: "space-between" }}>
             <Box sx={{ display: "flex", alignItems: "center" }}>
               <LaptopMacRoundedIcon
                 sx={{

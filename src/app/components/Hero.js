@@ -1,39 +1,53 @@
+"use client";
+import * as React from "react";
+import { TransitionGroup } from "react-transition-group";
 import styles from "../page.module.css";
 import Typography from "@mui/material/Typography";
+// import Slide from "@mui/material/Slide";
 
 export default function Hero() {
+//   const [slideIn, setSlideIn] = React.useState(false);
+
+  // const handleChange = () => {
+  //   setSlideIn(true);
+  // };
+
   return (
     <section className={styles.hero}>
-      <Typography
-        variant="body"
-        component="h1"
-        sx={{
-        //   fontFamily: "monospace",
-          color: "#707070",
-          letterSpacing: ".3rem",
-          fontSize: { xs: "1.1rem", sm: "1.75rem"},
-          fontWeight: 500,
-          textWrap: "nowrap",
-        }}
-      >
-        my name is rachel little,
-      </Typography>
-      <Typography
-        variant="body"
-        component="h2"
-        gutterBottom
-        sx={{
-        //   fontFamily: "monospace",
-          color: "#707070",
-          letterSpacing: ".3rem",
-          fontSize: {xs:"1.75rem", sm: "2.25rem"},
-          fontWeight: 700,
-          textTransform: "uppercase",
-          textWrap: "nowrap",
-        }}
-      >
-        I have BIG ideas.
-      </Typography>
+      {/* <TransitionGroup>
+        <Slide direction="left" in={true} mountOnEnter={true}> */}
+          <Typography
+            variant="body"
+            component="h1"
+            sx={{
+              //   fontFamily: "monospace",
+              color: "#707070",
+              letterSpacing: ".2rem",
+              fontSize: { xs: "1rem", md: "1.75rem" },
+              fontWeight: 500,
+              textWrap: "nowrap",
+            }}
+          >
+            my name is rachel little,
+          </Typography>
+          <Typography
+            variant="body"
+            component="h2"
+            gutterBottom
+            sx={{
+              //   fontFamily: "monospace",
+              color: "#707070",
+              letterSpacing: ".25rem",
+              fontSize: { xs: "1.65rem", md: "2.25rem" },
+              fontWeight: 700,
+              textTransform: "uppercase",
+              textWrap: "nowrap",
+            }}
+          >
+            I have BIG ideas.
+          </Typography>
+        {/* </Slide>
+      </TransitionGroup> */}
     </section>
   );
 }

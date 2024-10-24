@@ -5,6 +5,7 @@ import ProjectCard from "./components/ProjectCard";
 import ProjectsSlider from "./components/ProjectsSlider";
 // MUI
 import Container from "@mui/material/Container";
+import Typography from "@mui/material/Typography";
 
 export default function Home() {
   return (
@@ -13,7 +14,19 @@ export default function Home() {
         <Hero />
         <AboutMe />
         <div className={styles.projects} id="projects">
-          <h2>Recent Projects</h2>
+          <Typography
+            sx={{
+              fontFamily: "Roboto Mono, monospace",
+              color: "#616161",
+              fontWeight: 600,
+              fontSize: { xs: "1.5rem", md: "1.65rem" },
+            //   p: 1,
+              textAlign: "left",
+              textTransform: "uppercase",
+            }}
+          >
+            Recent Projects
+          </Typography>
           <hr />
           <ProjectsSlider />
           {/* <div className={styles.projectCards}>
