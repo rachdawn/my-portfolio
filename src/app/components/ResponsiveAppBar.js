@@ -1,7 +1,6 @@
 "use client";
 import * as React from "react";
 import Link from "next/link";
-// import AboutDialog from "./AboutDialog";
 // MUI
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -11,7 +10,6 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import Tooltip from "@mui/material/Tooltip";
 import LaptopMacRoundedIcon from "@mui/icons-material/LaptopMacRounded";
@@ -19,7 +17,6 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import FileOpenOutlinedIcon from "@mui/icons-material/FileOpenOutlined";
-// import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const theme = createTheme({
@@ -31,7 +28,7 @@ const theme = createTheme({
     },
     secondary: {
       main: "#707070",
-      light: "#9e8e8e",
+      light: "#787276db", //fossil
       dark: "#616161",
     },
   },
@@ -65,6 +62,7 @@ const theme = createTheme({
     },
   },
 });
+
 const pages = ["Projects"];
 const email = `mailto:${process.env.EMAIL}`;
 
@@ -115,7 +113,6 @@ export default function ResponsiveAppBar() {
                 rl
               </Typography>
             </Box>
-
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
               <IconButton
                 size="large"
@@ -156,31 +153,6 @@ export default function ResponsiveAppBar() {
                 ))}
               </Menu>
             </Box>
-            {/* <LaptopMacRoundedIcon
-              sx={{
-                display: { xs: "flex", md: "none" },
-                mr: 1,
-                color: "#616161",
-              }}
-            />
-            <Typography
-              variant="h5"
-              noWrap
-              component="a"
-              href="/"
-              sx={{
-                mr: 2,
-                display: { xs: "flex", md: "none" },
-                flexGrow: 1,
-                fontFamily: "Roboto Mono, monospace",
-                fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "#616161",
-                textDecoration: "none",
-              }}
-            >
-              rl
-            </Typography> */}
             <Box
               sx={{
                 justifyContent: "flex-end",
@@ -199,12 +171,6 @@ export default function ResponsiveAppBar() {
                   rel="noopener noreferrer"
                   color="primary"
                   aria-label="Resume"
-                  // sx={{
-                  //   fontFamily: "Roboto Mono, monospace",
-                  //   bgcolor: "main",
-                  //   color: "primary.solid",
-                  //   display: "flex",
-                  // }}
                 >
                   <FileOpenOutlinedIcon />
                 </IconButton>
@@ -236,15 +202,6 @@ export default function ResponsiveAppBar() {
                   <LinkedInIcon />
                 </IconButton>
               </Tooltip>
-
-              {/* <IconButton
-                href={phone}
-                // target="_blank"
-                rel="noopener noreferrer"
-                color="secondary"
-            >
-                <PhoneOutlinedIcon />
-            </IconButton> */}
               <Tooltip title="GitHub Profile" arrow>
                 <IconButton
                   onClick={() => window.open("https://github.com/rachdawn")}
