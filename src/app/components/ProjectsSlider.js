@@ -12,8 +12,8 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import ArrowCircleLeftRoundedIcon from "@mui/icons-material/ArrowCircleLeftRounded";
-import ArrowCircleRightRoundedIcon from "@mui/icons-material/ArrowCircleRightRounded";
+// import ArrowCircleLeftRoundedIcon from "@mui/icons-material/ArrowCircleLeftRounded";
+// import ArrowCircleRightRoundedIcon from "@mui/icons-material/ArrowCircleRightRounded";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -87,7 +87,6 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           fontFamily: "Roboto Mono, monospace",
-          //   color: "rgb(234, 205, 207)"
         },
       },
     },
@@ -107,7 +106,6 @@ const theme = createTheme({
 //     <ArrowCircleRightRoundedIcon className={`w-fit top-1/2 opacity-0 lg:opacity-100 text-primary block items-center justify-center rounded-full bg-background/20 hover:bg-background/30 p-1 shadow-md absolute z-10 right-5`} onClick={onClick} />
 //   );
 // }
-
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -136,17 +134,17 @@ export default function ProjectsSlider() {
     // nextArrow: <NextArrow />,
     // prevArrow: <PrevArrow />,
     responsive: [
-    //   {
-    //     breakpoint: 1400,
-    //     settings: {
-    //       slidesToShow: 3,
-    //       slidesToScroll: 3,
-    //       infinite: true,
-    //       dots: true,
-    //     },
-    //   },
+      //   {
+      //     breakpoint: 1400,
+      //     settings: {
+      //       slidesToShow: 3,
+      //       slidesToScroll: 3,
+      //       infinite: true,
+      //       dots: true,
+      //     },
+      //   },
       {
-        breakpoint: 1250,
+        breakpoint: 1180,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -154,7 +152,7 @@ export default function ProjectsSlider() {
         },
       },
       {
-        breakpoint: 800,
+        breakpoint: 767,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -164,22 +162,29 @@ export default function ProjectsSlider() {
   };
   return (
     <ThemeProvider theme={theme}>
-      <section className="slider-container" style={{ justifyItems: 'center', justifyContent: 'center' }}>
+      <div className={styles.projects} id="projects">
+        <Typography
+          sx={{
+            fontFamily: "Roboto Mono, monospace",
+            color: "#616161",
+            fontWeight: 600,
+            fontSize: { xs: "1.5rem", md: "1.65rem" },
+            //   p: 1,
+            textAlign: "left",
+            textTransform: "uppercase",
+          }}
+        >
+          Recent Projects
+        </Typography>
+        <hr />
         <Slider {...settings} className={styles.projectsSlider}>
           {projects.map((project, index) => {
             return (
               <Card
                 sx={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(auto-fit, minmax(355px, 1fr))",
-                    gap: "1rem",
-                //   p: 1,
-                  maxWidth: 348,
-                  justifySelf: "center",
-                //   minWidth: 345,
-                // height: 350,
-                  margin: "1rem",
-                  marginRight: "0.5rem",
+                  display: "grid",
+                  maxWidth: 340,
+                  margin: "0.75rem auto",
                   bgcolor: "rgb(218,218,218,0.5)",
                   color: "#616161",
                   fontFamily: "Roboto Mono, monospace",
@@ -190,7 +195,7 @@ export default function ProjectsSlider() {
                   sx={{
                     fontFamily: "Roboto Mono, monospace",
                     letterSpacing: ".3rem",
-                    fontSize: "3.25dvb",
+                    fontSize: "1.375rem",
                     fontWeight: 600,
                     textWrap: "nowrap",
                     padding: "0.75rem",
@@ -203,8 +208,9 @@ export default function ProjectsSlider() {
                 <Image
                   src={project.image}
                   alt={project.alt}
-                  width="348"
+                  width="340"
                   height="240"
+                  overflow="hidden"
                   className={styles.projectImage}
                 />
                 <CardActions disableSpacing sx={{ m: 0, p: 0.5 }}>
@@ -230,14 +236,14 @@ export default function ProjectsSlider() {
                     <Typography
                       paragraph
                       variant="body1"
-                      sx={{ color: "#616161" }}
+                      sx={{ color: "#616161", textAlign: "left" }}
                     >
                       {project.description}
                     </Typography>
                     <Typography
                       paragraph
                       variant="body1"
-                      sx={{ color: "#616161" }}
+                      sx={{ color: "#616161", textAlign: "left" }}
                     >
                       <b>Tech Stack:</b> {project.techStack}
                     </Typography>
@@ -246,26 +252,8 @@ export default function ProjectsSlider() {
               </Card>
             );
           })}
-          {/* <div>
-        <h3>1</h3>
-      </div>
-      <div>
-        <h3>2</h3>
-      </div>
-      <div>
-        <h3>3</h3>
-      </div>
-      <div>
-        <h3>4</h3>
-      </div>
-      <div>
-        <h3>5</h3>
-      </div>
-      <div>
-        <h3>6</h3>
-      </div> */}
         </Slider>
-      </section>
+      </div>
     </ThemeProvider>
   );
 }

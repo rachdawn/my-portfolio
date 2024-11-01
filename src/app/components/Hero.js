@@ -1,8 +1,8 @@
 "use client";
 import * as React from "react";
-import { TransitionGroup } from "react-transition-group";
 import styles from "../page.module.css";
 import Typography from "@mui/material/Typography";
+// import { TransitionGroup } from "react-transition-group";
 // import Slide from "@mui/material/Slide";
 
 export default function Hero() {
@@ -20,7 +20,6 @@ export default function Hero() {
             variant="body"
             component="h1"
             sx={{
-              //   fontFamily: "monospace",
               color: "#707070",
               letterSpacing: ".2rem",
               fontSize: { xs: "1rem", md: "1.75rem" },
@@ -35,7 +34,6 @@ export default function Hero() {
             component="h2"
             gutterBottom
             sx={{
-              //   fontFamily: "monospace",
               color: "#707070",
               letterSpacing: ".25rem",
               fontSize: { xs: "1.65rem", md: "2.25rem" },
