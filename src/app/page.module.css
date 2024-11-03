@@ -1,60 +1,82 @@
 .main {
   top: 0;
+  /* bottom: 0; */
+  height: 100%;
   justify-content: center;
   align-items: center;
-  background: url("../assets/pawel-czerwinski-2PN18U8CKi0-unsplash.jpg");
-  /* background-size: 100vw 300vh; */
-  background-size: cover;
-  filter: saturate(0.8);
   margin: 0 auto;
-    padding-top: 3rem;
-  background-repeat: no-repeat;
-  padding-bottom: 2rem;
+  padding-left: 0.525rem;
+  padding-right: 0.525rem;
+  padding-top: 2rem;
+  padding-bottom: 0;
 }
 .hero {
-  height: 30vh;
+  height: 24vh;
   align-content: center;
-  /* position: sticky; */
-  /* padding: 1rem; */
-  /* top: 15vh; */
   text-align: center;
 }
 
 .about hr {
-  margin: 1rem;
+  margin: 0.5rem;
   border: 1.25px solid #707070;
 }
 
 .about h2 {
   font-size: 1.75rem;
-  /* font-family: monospace; */
   color: #616161;
 }
 
 .projects {
-  padding-top: 1rem;
+  padding: 0.75rem;
 }
 
 .projects h2 {
   font-size: 1.75rem;
-  /* font-family: monospace; */
   color: #616161;
+  margin: 0.375rem auto;
 }
 
 .projects hr {
-  margin: 1rem 0;
-  margin-bottom: 2rem;
+  margin: 0.25rem 0;
+  margin-bottom: 1rem;
   border: 1.25px solid #707070;
 }
 
 .projectCards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));
-  gap: 1.5rem;
-  /* padding: 0.5rem; */
+  padding: 0.5rem;
   align-content: center;
   justify-items: center;
   margin: 0 auto;
+}
+
+.slider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.projectsSlider {
+  text-align: center;
+}
+
+button .slick-arrow .slick-prev {
+  font-size: 1.5rem;
+  color: #616161;
+}
+.slick-prev:before,
+.slick-next:before {
+  font-size: 1.5rem;
+    color: #616161;
+}
+
+.slick-initialized .slick-slide {
+  display: inline-flex;
+  justify-content: center;
+}
+
+.slick-slide .slick-active .slick-current {
+  display: inline-flex;
+  justify-content: center;
 }
 
 
@@ -63,21 +85,14 @@
     top: 0;
     justify-content: center;
     align-items: center;
-    background: url("../assets/pawel-czerwinski-2PN18U8CKi0-unsplash.jpg");
-    background-size: 100vw 300vh;
-    /* background-size: cover; */
     filter: saturate(0.8);
     margin: 0 auto;
-    padding-top: 3rem;
+    /* padding-top: 3rem; */
     background-repeat: no-repeat;
-    /* font-family: monospace; */
   }
   .hero {
     height: 40vh;
-    /* position: sticky; */
-    /* margin: 3rem; */
     align-content: center;
-    /* padding-top: 12%; */
     text-align: end;
     margin-right: 2rem;
   }
@@ -89,17 +104,18 @@
 
   .about h2 {
     font-size: 1.75rem;
-    /* font-family: monospace; */
     color: #616161;
   }
 
   .projects {
-    padding: 0.5rem;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
   }
 
   .projects h2 {
     font-size: 1.75rem;
-    /* font-family: monospace; */
     color: #616161;
   }
 
@@ -107,15 +123,5 @@
     margin: 1rem 0;
     margin-bottom: 2rem;
     border: 1.25px solid #707070;
-  }
-
-  .projectCards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));
-    gap: 1.5rem;
-    /* padding: 0.5rem; */
-    align-content: center;
-    justify-items: center;
-    margin: 0 auto;
   }
 }
