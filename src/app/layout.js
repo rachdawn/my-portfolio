@@ -1,4 +1,4 @@
-// import { Inter } from "next/font/google";
+import { Analytics } from '@vercel/analytics/react';
 import { Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
@@ -19,6 +19,7 @@ export default function RootLayout({ children }) {
         <AppRouterCacheProvider>
             <ResponsiveAppBar />
             {children}
+            <Analytics />
             <Footer />
         </AppRouterCacheProvider>
       </body>
