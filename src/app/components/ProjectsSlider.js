@@ -184,7 +184,7 @@ export default function ProjectsSlider() {
                 sx={{
                   display: "grid",
                   maxWidth: 340,
-                  margin: "0.75rem auto",
+                  margin: "0.5rem auto",
                   bgcolor: "rgb(218,218,218,0.5)",
                   color: "#616161",
                   fontFamily: "Roboto Mono, monospace",
@@ -211,6 +211,7 @@ export default function ProjectsSlider() {
                   width="340"
                   height="240"
                   overflow="hidden"
+                  margin="auto"
                   className={styles.projectImage}
                 />
                 <CardActions disableSpacing sx={{ m: 0, p: 0.5 }}>
@@ -221,6 +222,18 @@ export default function ProjectsSlider() {
                   >
                     <GitHubIcon />
                   </IconButton>
+                  <Typography
+                    sx={{
+                      color: "#616161",
+                      justifyContent: "right",
+                      display: "flex",
+                      width: "100%",
+                      fontSize: "0.8rem",
+                      verticalAlign: "bottom",
+                    }}
+                  >
+                    Project Details
+                  </Typography>
                   <ExpandMore
                     expand={expanded}
                     onClick={handleExpandClick}
@@ -232,7 +245,7 @@ export default function ProjectsSlider() {
                   </ExpandMore>
                 </CardActions>
                 <Collapse in={expanded} timeout="auto" unmountOnExit>
-                  <CardContent>
+                  <CardContent sx={{ p: 2 }}>
                     <Typography
                       paragraph
                       variant="body1"
