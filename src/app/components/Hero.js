@@ -42,7 +42,7 @@ export default function Hero() {
             textAlign: "center",
           }}
         >
-          I'm a full-stack developer.
+          I&apos;m a full-stack developer.
         </Typography>
         <Typography
           variant="body"
