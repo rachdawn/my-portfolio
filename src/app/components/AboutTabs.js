@@ -119,13 +119,17 @@ export default function AboutTabs() {
             <br />
             JavaScript, Ruby, HTML, CSS, SCSS, SQL
             <br />
+            <br />
             <b>Frameworks & Libraries:</b>
             <br />
             React, Node.js, Next.js, Ajax, Express, EJS, jQuery, Rails, Material
             UI
             <br />
-            <b>Systems & Databases:</b> <br />
+            <br />
+            <b>Systems & Databases:</b>
+            <br />
             PostgreSQL, Git, Stripe, Zoho
+            <br />
             <br />
             <b>Testing:</b> <br />
             Mocha, Chai, Jest, Cypress, RSpec
