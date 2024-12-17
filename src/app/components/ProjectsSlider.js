@@ -60,25 +60,25 @@ const projects = [
     techStack: "PSQL, Express, React, Node.js, Axios",
     githubLink: "https://github.com/rachdawn/PhotoLabs",
   },
-  {
-    title: "Tweeter",
-    date: "November 2023",
-    image: "/images/TweeterLP.png",
-    alt: "Tweeter Landing Page",
-    description: "A single-page application (SPA), mini clone of Twitter.",
-    techStack: "jQuery, AJAX, Express, Node.js, HTML/CSS",
-    githubLink: "https://github.com/rachdawn/Tweeter",
-  },
-  {
-    title: "TinyApp",
-    date: "October 2023",
-    image: "/images/TinyAppLP.png",
-    alt: "TinyApp Landing Page",
-    description:
-      "A single-page application (SPA) that allows users to shorten URLs.",
-    techStack: "Express, Node.js, EJS, HTML/CSS",
-    githubLink: "https://github.com/rachdawn/TinyApp",
-  },
+  //   {
+  //     title: "Tweeter",
+  //     date: "November 2023",
+  //     image: "/images/TweeterLP.png",
+  //     alt: "Tweeter Landing Page",
+  //     description: "A single-page application (SPA), mini clone of Twitter.",
+  //     techStack: "jQuery, AJAX, Express, Node.js, HTML/CSS",
+  //     githubLink: "https://github.com/rachdawn/Tweeter",
+  //   },
+  //   {
+  //     title: "TinyApp",
+  //     date: "October 2023",
+  //     image: "/images/TinyAppLP.png",
+  //     alt: "TinyApp Landing Page",
+  //     description:
+  //       "A single-page application (SPA) that allows users to shorten URLs.",
+  //     techStack: "Express, Node.js, EJS, HTML/CSS",
+  //     githubLink: "https://github.com/rachdawn/TinyApp",
+  //   },
 ];
 
 const theme = createTheme({
@@ -134,17 +134,8 @@ export default function ProjectsSlider() {
     // nextArrow: <NextArrow />,
     // prevArrow: <PrevArrow />,
     responsive: [
-      //   {
-      //     breakpoint: 1400,
-      //     settings: {
-      //       slidesToShow: 3,
-      //       slidesToScroll: 3,
-      //       infinite: true,
-      //       dots: true,
-      //     },
-      //   },
       {
-        breakpoint: 1180,
+        breakpoint: 1350,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -152,7 +143,7 @@ export default function ProjectsSlider() {
         },
       },
       {
-        breakpoint: 767,
+        breakpoint: 1000,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -162,45 +153,29 @@ export default function ProjectsSlider() {
   };
   return (
     <ThemeProvider theme={theme}>
-      <div className={styles.projects} id="projects">
-        <Typography
-          sx={{
-            fontFamily: "Roboto Mono, monospace",
-            color: "#616161",
-            fontWeight: 600,
-            fontSize: { xs: "1.5rem", md: "1.65rem" },
-            //   p: 1,
-            textAlign: "left",
-            textTransform: "uppercase",
-          }}
-        >
-          Recent Projects
-        </Typography>
-        <hr />
+      <div className={styles.projects}>
         <Slider {...settings} className={styles.projectsSlider}>
-          {projects.map((project, index) => {
+          {projects.map((project) => {
             return (
               <Card
                 sx={{
                   display: "grid",
                   maxWidth: 340,
                   margin: "0.5rem auto",
-                  bgcolor: "rgb(218,218,218,0.5)",
-                  color: "#616161",
+                  bgcolor: "rgb(193, 152, 152, 0.7)",
+                  color: "#eed6c4",
                   fontFamily: "Roboto Mono, monospace",
                 }}
-                key={index}
+                key={project.title}
               >
                 <CardHeader
                   sx={{
                     fontFamily: "Roboto Mono, monospace",
                     letterSpacing: ".3rem",
-                    fontSize: "1.375rem",
-                    fontWeight: 600,
+                    fontSize: "1.25rem",
                     textWrap: "nowrap",
                     padding: "0.75rem",
                     textAlign: "end",
-                    color: "#616161",
                   }}
                   title={project.title}
                   subheader={project.date}
@@ -218,13 +193,12 @@ export default function ProjectsSlider() {
                   <IconButton
                     aria-label="View on Github"
                     onClick={() => window.open(project.githubLink)}
-                    sx={{ color: "#616161" }}
                   >
                     <GitHubIcon />
                   </IconButton>
                   <Typography
                     sx={{
-                      color: "#616161",
+                      color: "#EED6C4",
                       justifyContent: "right",
                       display: "flex",
                       width: "100%",
@@ -239,7 +213,7 @@ export default function ProjectsSlider() {
                     onClick={handleExpandClick}
                     aria-expanded={expanded}
                     aria-label="show more"
-                    sx={{ color: "#616161" }}
+                    sx={{ color: "#EED6C4" }}
                   >
                     <ExpandMoreIcon />
                   </ExpandMore>
@@ -249,14 +223,14 @@ export default function ProjectsSlider() {
                     <Typography
                       paragraph
                       variant="body1"
-                      sx={{ color: "#616161", textAlign: "left" }}
+                      sx={{ color: "#eed6c4", textAlign: "left" }}
                     >
                       {project.description}
                     </Typography>
                     <Typography
                       paragraph
                       variant="body1"
-                      sx={{ color: "#616161", textAlign: "left" }}
+                      sx={{ color: "#eed6c4", textAlign: "left" }}
                     >
                       <b>Tech Stack:</b> {project.techStack}
                     </Typography>

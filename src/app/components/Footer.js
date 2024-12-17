@@ -9,7 +9,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#707070",
+      main: "#EED6C4",
       dark: "#B86782",
     },
     secondary: {
@@ -28,8 +28,12 @@ export default function Footer() {
           justifyContent: "center",
           display: "flex",
           alignItems: "center",
-          p: "0.125rem",
+        //   p: "0.5rem",
           bgcolor: "transparent",
+          position: "absolute",
+          height: "2rem",
+          width: "100%",
+          bottom: 0,
         }}
       >
         <Typography
