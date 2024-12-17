@@ -86,9 +86,15 @@ body {
 }
 
 body {
-  background: url("../assets/pawel-czerwinski-2PN18U8CKi0-unsplash.jpg"), rgb(240, 208, 210);
-  background-size: cover;
-  backdrop-filter: saturate(0.9);
+    /* background-color: #4A4A48; */
+    background-color: #2B2B28;
+    min-height: 100vh;
+    position: relative;
+
+  /* background: url("../assets/pawel-czerwinski-2PN18U8CKi0-unsplash.jpg"), rgb(240, 208, 210); */
+  /* background: rgb(179,153,143); */
+  /* background: radial-gradient(circle, rgba(179,153,143,1) 16%, rgba(135,107,104,1) 63%, rgba(107,79,79,1) 92%); */
+  /* backdrop-filter: saturate(0.9); */
 }
 
 a {

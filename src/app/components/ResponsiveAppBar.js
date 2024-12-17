@@ -1,30 +1,27 @@
 "use client";
 import * as React from "react";
-import Link from "next/link";
 // MUI
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import MenuItem from "@mui/material/MenuItem";
 import Tooltip from "@mui/material/Tooltip";
 import LaptopMacRoundedIcon from "@mui/icons-material/LaptopMacRounded";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import FileOpenOutlinedIcon from "@mui/icons-material/FileOpenOutlined";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: "rgb(240, 208, 210)",
+      light: "#c19191",
+      main: "#C19898",
       solid: "rgb(240, 208, 210)",
-      dark: "#B86782",
+      dark: "#6B4F4F",
+      darker: "#483434",
     },
     secondary: {
       main: "#707070",
@@ -64,7 +61,6 @@ const theme = createTheme({
 });
 
 const pages = ["Projects"];
-const email = `mailto:${process.env.EMAIL}`;
 
 export default function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -82,15 +78,20 @@ export default function ResponsiveAppBar() {
       <AppBar
         sx={{
           position: "sticky",
-          backgroundColor: "secondary.light",
+          backgroundColor: "transparent",
+          py: 0.75,
+          px: 0,
         }}
       >
         <Container maxWidth="fullWidth">
           <Toolbar sx={{ justifyContent: "space-between" }}>
-            <Box sx={{ display: "flex", alignItems: "center" }}>
+            <Box
+              component="a"
+              href="/"
+              sx={{ display: "flex", alignItems: "center" }}
+            >
               <LaptopMacRoundedIcon
                 sx={{
-                  display: { xs: "none", md: "flex" },
                   mx: 1,
                   color: "primary.main",
                 }}
@@ -98,11 +99,8 @@ export default function ResponsiveAppBar() {
               <Typography
                 variant="h6"
                 noWrap
-                component="a"
-                href="/"
                 sx={{
                   mr: 2,
-                  display: { xs: "none", md: "flex" },
                   fontFamily: "Roboto Mono, monospace",
                   fontWeight: 700,
                   letterSpacing: ".3rem",
@@ -113,46 +111,6 @@ export default function ResponsiveAppBar() {
                 rl
               </Typography>
             </Box>
-            <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-              <IconButton
-                size="large"
-                aria-label="menu"
-                aria-controls="menu-appbar"
-                aria-haspopup="true"
-                onClick={handleOpenNavMenu}
-                color="primary"
-              >
-                <MenuIcon />
-              </IconButton>
-              <Menu
-                id="menu-appbar"
-                anchorEl={anchorElNav}
-                anchorOrigin={{
-                  vertical: "bottom",
-                  horizontal: "right",
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: "top",
-                  horizontal: "right",
-                }}
-                open={Boolean(anchorElNav)}
-                onClose={handleCloseNavMenu}
-                sx={{
-                  display: { xs: "block", md: "none" },
-                }}
-              >
-                {pages.map((page) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu} dense>
-                    <Link href="/#projects">
-                      <Typography textAlign="center" fontFamily="monospace">
-                        {page}
-                      </Typography>
-                    </Link>
-                  </MenuItem>
-                ))}
-              </Menu>
-            </Box>
             <Box
               sx={{
                 justifyContent: "flex-end",
@@ -162,7 +120,7 @@ export default function ResponsiveAppBar() {
                 mr: -1,
               }}
             >
-              <Tooltip title="Open Resume" arrow>
+              <Tooltip title="Resume" arrow>
                 <IconButton
                   onClick={() =>
                     window.open("https://flowcv.com/resume/fq67vtvo3c")
@@ -175,19 +133,7 @@ export default function ResponsiveAppBar() {
                   <FileOpenOutlinedIcon />
                 </IconButton>
               </Tooltip>
-              <Tooltip title="Contact Me (email)" arrow>
-                <IconButton
-                  component="a"
-                  href={email}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  color="primary"
-                  aria-label="Email"
-                >
-                  <EmailOutlinedIcon />
-                </IconButton>
-              </Tooltip>
-              <Tooltip title="LinkedIn Profile" arrow>
+              <Tooltip title="LinkedIn" arrow>
                 <IconButton
                   onClick={() =>
                     window.open(
@@ -202,7 +148,7 @@ export default function ResponsiveAppBar() {
                   <LinkedInIcon />
                 </IconButton>
               </Tooltip>
-              <Tooltip title="GitHub Profile" arrow>
+              <Tooltip title="GitHub" arrow>
                 <IconButton
                   onClick={() => window.open("https://github.com/rachdawn")}
                   target="_blank"
